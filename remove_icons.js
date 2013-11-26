@@ -1,3 +1,18 @@
+function addGaScript() {
+  var head = document.getElementsByTagName('head')[0];
+  var e = document.createElement('script');
+  e.setAttribute('type','text/javascript');
+  e.innerHTML = 
+    "(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n" +
+    "(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n" +
+    "m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n" +
+    "})(window,document,'script','//www.google-analytics.com/analytics.js','_cleargooglebar_ga');\n" +
+    "_cleargooglebar_ga('create', 'UA-45967685-1');\n" +
+    "_cleargooglebar_ga('set', 'page', '/' + window.location.hostname + window.location.pathname + window.location.search);\n" +
+    "_cleargooglebar_ga('send', 'pageview');\n";
+  head.appendChild(e);
+}
+
 window.onload = function RemoveIcons() {
   var share_url = 'https://plus.google.com/u/0/stream/all';
   var plus_url = 'https://plus.google.com/u/0/';
@@ -46,5 +61,6 @@ window.onload = function RemoveIcons() {
 
   if (common_ancestor != null && common_ancestor.parentNode != null) {
     common_ancestor.parentNode.removeChild(common_ancestor);
+    addGaScript();
   }
 };
