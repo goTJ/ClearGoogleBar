@@ -14,7 +14,7 @@ window.onload = function RemoveIcons() {
     var href = elements[i].getAttribute('href');
     if (href == null)
       continue;
-    herf = herf.split('?')[0];
+    href = href.split('?')[0];
     if (share_element == null && href == share_url) {
       share_element = elements[i];
     } else if (plus_element == null && href == plus_url) {
