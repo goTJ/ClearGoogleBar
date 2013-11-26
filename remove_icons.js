@@ -1,7 +1,7 @@
 window.onload = function RemoveIcons() {
   var share_url = 'https://plus.google.com/u/0/stream/all';
-  var plus_url = 'https://plus.google.com/u/0/?tab=';
-  var plus_me_url = 'https://plus.google.com/u/0/me?tab=';
+  var plus_url = 'https://plus.google.com/u/0/';
+  var plus_me_url = 'https://plus.google.com/u/0/me';
   var share_element = null;
   var plus_element = null;
   var plus_me_element = null;
@@ -14,11 +14,12 @@ window.onload = function RemoveIcons() {
     var href = elements[i].getAttribute('href');
     if (href == null)
       continue;
-    if (share_element == null && href.indexOf(share_url) != -1) {
+    herf = herf.split('?')[0];
+    if (share_element == null && href == share_url) {
       share_element = elements[i];
-    } else if (plus_element == null && href.indexOf(plus_url) != -1) {
+    } else if (plus_element == null && href == plus_url) {
       plus_element = elements[i];
-    } else if (plus_me_element == null && href.indexOf(plus_me_url) != -1) {
+    } else if (plus_me_element == null && href == plus_me_url) {
       plus_me_element = elements[i];
     }
   }
