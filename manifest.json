@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
 
-  "name": "Clear Google Bar",
-  "version": "0.2",
-  "description": "Clear Google bar.",
+  "name": "Clear G-Bar",
+  "version": "0.21",
+  "description": "Clear G-bar.",
 
   "content_scripts": [
     {

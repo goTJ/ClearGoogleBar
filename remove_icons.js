@@ -34,7 +34,7 @@ function AddGaScript() {
 function SendEvent() {
   AppendScriptToHead(
     "_cleargooglebar_ga('send', 'event', 'auto', 'clear', window.location.hostname + window.location.pathname);\n" +
-    "_cleargooglebar_ga('send', 'timing', 'auto', 'clear', " + counter * INTERVAL + ", window.location.hostname + window.location.pathname);\n" +
+    "_cleargooglebar_ga('send', 'timing', 'auto', 'clear', " + counter * INTERVAL + ", window.location.hostname + window.location.pathname);\n"
   );
 }
 
