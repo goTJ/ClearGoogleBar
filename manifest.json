@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Clear Google Bar",
-  "version": "0.1",
+  "version": "0.2",
   "description": "Clear Google bar.",
 
   "content_scripts": [
