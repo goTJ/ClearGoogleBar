@@ -64,7 +64,10 @@ function RemoveIcons() {
     }
   }
   // Replace plus_element if it's old Google bar.
-  if (plus_me_element != null && plus_element.parentNode.tagName == 'LI')
+  if (plus_me_element != null &&
+      plus_element != null &&
+      plus_element.parentNode != null &&
+      plus_element.parentNode.tagName == 'LI')
     plus_element = plus_me_element;
 
   // Find the nearest common parent of these two icons.
